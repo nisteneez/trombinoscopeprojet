@@ -1,0 +1,129 @@
+body {
+  overflow-x: hidden;
+  margin: auto;
+  background-image: url('fond.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#bloc_page {
+  background-color: white;
+	width: 800px;
+	margin: auto;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+h1 {
+  text-align:center;
+}
+
+p {
+  padding: 10px;
+  text-align:left;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90px;
+  width: 250px;
+}
+
+/* Navigation */
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    margin: auto; 
+    padding-left: 280px;
+   
+}
+
+nav li{
+    margin-right: 40px;
+}
+
+nav a{
+    font-size: 1.4em;
+    color: #181818;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: lightgrey;
+    border-bottom: 2px solid white;
+}
+
+
+/*Inscription*/
+
+input {
+  display: block;
+  width: 500px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+#filiere{
+  width: 250px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+#groupe{
+  width: 250px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+#button {
+  width: 25%;
+  height: 60px;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color:#F0C300;
+  display: block;
+  margin: auto;
+  text-align:center;
+}
+
+/*Mes informations*/
+
+#labelinfo {
+  padding: 10px;
+}
+
+#inputinfo {
+  display: block;
+  width: 315px;
+  height: 25px;
+  border-radius: 2px;  
+}
+
+#photo {
+  width: 30%;
+  height: 250px;
+  float: right;
+  position: relative;
+  bottom: 500px;
+  right: 70px;
+}
+
+#afficher {
+  float: right;
+  position: relative;
+  bottom: 200px;
+  left: 460px;
+}
+
+#buttonphoto {
+  display: block;
+  position: relative;
+  bottom: 150px;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+}
