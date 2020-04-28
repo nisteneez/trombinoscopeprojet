@@ -41,7 +41,7 @@
 			</tr>
 			<td><br><label>Adresse email :</label></td>
 			<tr>
-				<td><input placeholder=" Votre mail"  type="email" name="email" required /></td>
+				<td><input placeholder=" Votre email"  type="email" name="email" required /></td>
 			</tr>
 			<td><br><label>Mot de passe :</label></td>
 			<tr>

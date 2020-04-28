@@ -38,81 +38,69 @@
 			}
 		?>
 
-		<?php 
-	
-			if(isset($_POST['afficher']))
-			{
-				$upload = 'image/';
-			}
-
-			if (isset($_FILES['photo']) AND !empty($_FILES['photo']['nom']))
-			{
-				$extensionsValides = array('jpg');
-			}
-
-		?>
-
 		<form method="get" action="modification.php">
 		<table>
 			<tr>
 				<td><label id="labelinfo">Nom :</label></td>
-				<td><input placeholder="<?php echo $info[0]; ?>" type="text" name="nom" id="inputinfo"/></td>
+				<td><input value="<?php echo $info[0]; ?>" type="text" name="nom" id="inputinfo"/></td>
 			</tr>
 			<tr>
 				<td><br><br><label id="labelinfo">Prénom :</label></td>
-				<td><br><br><input placeholder="<?php echo $info[1]; ?>" type="text" name="prenom" id="inputinfo"/></td>
+				<td><br><br><input value="<?php echo $info[1]; ?>" type="text" name="prenom" id="inputinfo"/></td>
 			</tr>
 			<tr>
 				<td><br><br><label id="labelinfo">E-mail :</label></td>
-				<td><br><br><input placeholder="<?php echo $info[2]; ?>"  type="email" name="email" id="inputinfo"/></td>
+				<td><br><br><input value="<?php echo $info[2]; ?>"  type="email" name="email" id="inputinfo"/></td>
+			</tr>
+			<tr>
+				<td><br><br><label id="labelinfo">Mot de passe : *</label></td>
+				<td><br><br><input value="<?php echo $info[3]; ?>"  type="password" name="password" id="inputinfo" title="Pour plus de sécurité le mot de passe et chiffré !" /></td>
 			</tr>
 			<tr>
 				<td><br><br><label id="labelinfo">Filière :</label></td>
-				<td><br><br>
-					<select name="filiere" id="filiere">
-						<option><?php echo $info[4]; ?></option>
-						<option>-------------------------------------------</option>
-						<option>L1-MIPI</option>
-						<option>L2-MIPI</option>
-						<option>L3-I</option>
-						<option>LP RS</option>
-						<option>LPI-RIWS</option>
-					</select>
-				</td>
+				<td><br><br><input value="<?php echo $info[4]; ?>"  type="text" name="filiere" id="inputinfo"/></td>
 			</tr>
 			<tr>
 				<td><br><br><label id="labelinfo">Groupe :</label></td>
-				<td><br><br>
-					<select name="groupe" id="groupe">
-						<option><?php echo $info[5]; ?></option>
-						<option>-------------------------------------------</option>
-						<option>Groupe A</option>
-						<option>Groupe B</option>
-						<option>Groupe C</option>
-					</select>
-				</td>
+				<td><br><br><input value="<?php echo $info[5]; ?>"  type="text" name="groupe" id="inputinfo"/></td>
 			</tr>	
 		</table>
 
-		<br><br><br>
+		<br><br><br><br>
 
-		<input type="submit" name="enregistrer" value="Enregistrer" id="button"/>
+		<input type="submit" name="enregistrer" value="Enregistrer" id="button"/><br>
 
 		</form>
 
-		<form method="post" action="information.php">
+		<form method="post" action="deconnexion.php">
+			<input type="submit" value="Déconnexion" id="button"/>
+		</form>
+
+		<form method="post" enctype="multipart/form-data" action="information.php">
 		<table>
 		<tr>
 			<td><label id="afficher">Photo :</label></td>
-			<td><br><input type="file" name="photo" id="afficher"></td>
-			<td><input type="submit" name="afficher" value="Afficher" id="buttonphoto"></td>
+			<td><br><input type="file" name="fichier" id="afficher"></td>
+			<td><input type="submit" name="upload" value="Afficher" id="buttonphoto"></td>
 		</tr>	
 		</table>
 		</form>
 
-		<img id="photo" src="<?php echo 'image/' . basename($info[2].".jpg");?>">
+		<img id="photo" src="<?php echo 'images/' . basename($info[2]."jpg");?>">
 
-	<br><br>
+		<?php 
+			if(isset($_POST['apload']))
+				{
+					$upload = 'images/';
+				}
+
+			if (isset($_FILES['fichier']))
+				{
+					$extensionsValides = array('jpg');
+				}
+
+		?>
+
 
 	</div>
 </body>
