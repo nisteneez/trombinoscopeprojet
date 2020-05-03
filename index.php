@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
 	<title>Inscription</title>
 	<link rel="shortcut icon" href="ucp2.jpg" type="image/x-icon">
@@ -7,10 +8,19 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 </head> 
-<body> 
-	<h1>Compte étudiant : Inscription</h1>
+<body>
 
-	<img src="ucp.png">
+	<div id="menu">
+            <ul>
+            	<li><img src="ucp.png" id="logo"></li>
+                <li><a href="cleAPI.php"><img src="cle.jpg" id="icon" title="Documentation Cle API"></a></li>
+                <li><a href="connexion.php"><img src="login.jpg" id="icon" title="Accès au compte etudiant"></a></li>
+            </ul>
+    </div>
+
+ <hr>
+
+	<h1>Compte étudiant : Inscription</h1>
 
 	<br><br>
 
@@ -53,18 +63,18 @@
 
 		<select name="filiere" id="filiere">
 			<option>Filière</option>
-			<option>L1-MIPI</option>
-			<option>L2-MIPI</option>
-			<option>L3-I</option>
-			<option>LP RS</option>
-			<option>LPI-RIWS</option>
+			<option name="filiere">L1-MIPI</option>
+			<option name="filiere">L2-MIPI</option>
+			<option name="filiere">L3-I</option>
+			<option name="filiere">LP RS</option>
+			<option name="filiere">LPI-RIWS</option>
 		</select>
 
 		<select name="groupe" id="groupe">
 			<option>Groupe</option>
-			<option>Groupe A</option>
-			<option>Groupe B</option>
-			<option>Groupe C</option>
+			<option name="groupe">A</option>
+			<option name="groupe">B</option>
+			<option name="groupe">C</option>
 		</select>
 
 		<br><br><br>
@@ -93,7 +103,7 @@
 	else{
 
         $Fecriture= fopen("tb.csv", "a");
-		fwrite($Fecriture, $_GET['nom'].";".$_GET['prenom'].";".$_GET['email'].";".md5($_GET['email'].$_GET['password']).";".$_GET['filiere'].";".$_GET['groupe']."\n");
+		fwrite($Fecriture, $_GET['nom'].";".$_GET['prenom'].";".$_GET['email'].";".md5($_GET['email'].$_GET['password']).";".$_GET['filiere'].";".$_GET['groupe'].";"."\n");
 		fclose($Fecriture);
 		echo "Vous etes bien inscrit !";	  
 	     
@@ -104,12 +114,19 @@
 
 	?>
 
-			<br><br>
-			<a href="connexion.php">Retour à la page de connexion</a>
-			<br><br><br>
+	<br><br>
 
 	</div>
 	</div>
+
+	<br><br>
+
+	<hr>
+
+	<div id="footer">
+        <p>Projet Avril | Tout droit réservé | 2020</p>
+    </div>
+
 	<br><br><br>
 </body>
 </html>

@@ -9,11 +9,19 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 <body>
+		<div id="menu">
+            <ul>
+            	<li><img src="ucp.png" id="logo"></li>
+                <li><a href="cleAPI.php"><img src="cle.jpg" id="icon" title="Documentation Cle API"></a></li>
+                <li><a href="connexion.php"><img src="login.jpg" id="icon" title="Accès au compte etudiant"></a></li>
+            </ul>
+    	</div>
+
+<hr>
+
 	<h1>Mes informations</h1>
 
-	<img src="ucp.png">
-
-	<br><br>
+	<br>
 
 	<div id="bloc_page">
 		<br>
@@ -54,7 +62,7 @@
 			</tr>
 			<tr>
 				<td><br><br><label id="labelinfo">Mot de passe : *</label></td>
-				<td><br><br><input value="<?php echo $info[3]; ?>"  type="password" name="password" id="inputinfo" title="Pour plus de sécurité le mot de passe et chiffré !" /></td>
+				<td><br><br><input value="<?php echo $info[3]; ?>"  type="password" name="password" id="inputinfo" title="Pour plus de sécurité le mot de passe est chiffré !" /></td>
 			</tr>
 			<tr>
 				<td><br><br><label id="labelinfo">Filière :</label></td>
@@ -72,36 +80,28 @@
 
 		</form>
 
+
+
 		<form method="post" action="deconnexion.php">
 			<input type="submit" value="Déconnexion" id="button"/>
 		</form>
 
-		<form method="post" enctype="multipart/form-data" action="information.php">
+
+		<form method="post" enctype="multipart/form-data" action="photo.php">
+
 		<table>
 		<tr>
 			<td><label id="afficher">Photo :</label></td>
-			<td><br><input type="file" name="fichier" id="afficher"></td>
-			<td><input type="submit" name="upload" value="Afficher" id="buttonphoto"></td>
+			<td><br><input type="file" name="images" id="afficher"></td>
+			<td><input type="submit" value="Afficher" id="buttonphoto"></td>
 		</tr>	
 		</table>
+
+		<img id="photo" src="<?php echo './images/' . basename($info[2]."jpg");?>">
+		
 		</form>
 
-		<img id="photo" src="<?php echo 'images/' . basename($info[2]."jpg");?>">
-
-		<?php 
-			if(isset($_POST['apload']))
-				{
-					$upload = 'images/';
-				}
-
-			if (isset($_FILES['fichier']))
-				{
-					$extensionsValides = array('jpg');
-				}
-
-		?>
-
-
 	</div>
+	
 </body>
 </html>

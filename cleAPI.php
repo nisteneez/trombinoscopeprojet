@@ -9,7 +9,7 @@
 </head>
 <body>
 
-        <div id="menu">
+    <div id="menu">
             <ul>
                 <li><img src="ucp.png" id="logo"></li>
                 <li><a href="cleAPI.php"><img src="cle.jpg" id="icon" title="Documentation Cle API"></a></li>
@@ -20,7 +20,6 @@
  <hr>
 
     <h1>  clé API et sa documentation </h1>
-    
 
     <div id="bloc_page2">
     <hr>
@@ -68,11 +67,25 @@ if(isset($_GET['Mail_Api'])){
 
         echo"<p> voila votre clé: ".$apiCle."</p>";
     }
-}
+    }
 
-?>
-<br>
-<hr>
+    ?>
+    <br>
+
+    <hr>
+    <br>
+
+    <h2>JSON</h2>
+    <br>
+
+    <p>Les données fournies par https://etudiantcergypontoise.yj.fr peuvent être récupérées au format JSON.</p>
+    <br>
+
+    <h2>Récupération des données</h2>
+    <br>
+
+    <p></p>
+
 
     </div>
 

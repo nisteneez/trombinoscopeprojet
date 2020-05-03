@@ -10,7 +10,7 @@ function verification(){
 		if ($_GET['email']==$Rlignes[2] && md5($_GET['email'].$_GET['password'])==$Rlignes[3]) {
 	        $found=TRUE;
 	    }
-	    
+	    	    
 	}
 	if ($found==TRUE){
 	    header("Location: ./information.php");

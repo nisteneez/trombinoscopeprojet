@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
 	<title>Connexion</title>
 	<meta charset="utf-8">
@@ -8,10 +9,18 @@
 
 </head> 
 <body> 
-		<br><br>
-		<h1>Compte étudiant : Se connecter</h1>
 
-		<img src="ucp.png">
+	<div id="menu">
+        <ul>
+           	<li><img src="ucp.png" id="logo"></li>
+            <li><a href="cleAPI.php"><img src="cle.jpg" id="icon" title="Documentation Cle API"></a></li>
+            <li><a href="connexion.php"><img src="login.jpg" id="icon" title="Accès au compte etudiant"></a></li>
+        </ul>
+   	</div>
+
+    	<hr>
+
+		<h1>Compte étudiant : Se connecter</h1>
 
 		<br><br>
 
@@ -53,10 +62,16 @@
 		</form>
 
 		<br><br>
-		<a href="index.php">S'inscrire</a>
-		<br><br><br>
 
 		</div>
+		</div>
+		<br><br><br><br><br><br><br><br><br>
+
+		<hr>
+
+		<div id="footer">
+        <p>Projet Avril | Tout droit réservé | 2020</p>
+    	</div>
 
 	</body>
 </html>
