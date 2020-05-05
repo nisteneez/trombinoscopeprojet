@@ -2,13 +2,13 @@
 header('content-type:application/json');
 function api($filiere,$groupe){
     $RecupFich=file('tb.csv');
-    $etu['name']=$filiere."-".$groupe;
+    $etu['name']=$filiere."/".$groupe;
     $etu['etudiant']=array();
 
     for($i=0;$i <sizeof($RecupFich);$i++){
         $ligne=explode(";", $RecupFich[$i]);
         $tab=array();
-        if($filliere=$ligne[4] && $groupe == $ligne[5]){
+        if($filiere == $ligne[4] && $groupe == $ligne[5]){
             $tab[$i]['nom']=$ligne[0];
             $tab[$i]['prenom']=$ligne[1];
             $tab[$i]['email']=$ligne[2];

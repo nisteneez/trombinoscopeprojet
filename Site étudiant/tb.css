@@ -4,6 +4,7 @@ body {
   overflow-x: hidden;
   margin: auto;
   background-image: url('fond.jpg');
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding-left: 40px;
@@ -199,6 +200,29 @@ input {
   position: relative;
   bottom: 270px;
   left: 16px;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+/*CLE API*/
+
+#API {
+  display: block;
+  position: relative;
+  left:335px;
+}
+
+#inputAPI {
+  display: block;
+  width: 315px;
+  height: 25px;
+  border-radius: 2px;
+}
+
+#buttonAPI {
+  display: block;
+  position: relative;
   width: 100px;
   height: 35px;
   border-radius: 5px;

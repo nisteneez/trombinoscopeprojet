@@ -19,14 +19,20 @@
 
  <hr>
 
-    <h1>  clé API et sa documentation </h1>
+    <h1>  Clé API et sa documentation </h1>
 
     <div id="bloc_page2">
     <hr>
     <br>
-    <form method="get" action="cleAPI.php">
-        Veuillez entrer votre adresse email:<input type="mail" placeholder="Email" name="Mail_Api"><br>
-        <input type="submit" name="sub" value="valider">
+    <form method="get" action="cleAPI.php" id="API">
+        <table>
+                <td><label>Veuillez entrer votre adresse email:</label></td>
+            <tr>
+                <td><input type="mail" placeholder="Email" name="Mail_Api" id="inputAPI" required /></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" name="sub" value="valider" id="buttonAPI">
     </form>
 
 <?php
@@ -58,14 +64,14 @@ $mail='';
 if(isset($_GET['Mail_Api'])){
     $mail=$_GET['Mail_Api'];
     if(apiMail($mail)){
-        echo "<p> voila votre Clé: " .apiMail($mail)."</p>";
+        echo "<p> Votre Clé : " .apiMail($mail)."</p>";
     }
     else{
         $write_ligne="$mail;$apiCle;\n";
         $fichier=fopen('api.csv' , 'a');
         fwrite($fichier, $write_ligne);
 
-        echo"<p> voila votre clé: ".$apiCle."</p>";
+        echo"<p> Votre clé : ".$apiCle."</p>";
     }
     }
 
@@ -73,16 +79,12 @@ if(isset($_GET['Mail_Api'])){
     <br>
 
     <hr>
-    <br>
 
     <h2>JSON</h2>
-    <br>
 
     <p>Les données fournies par https://etudiantcergypontoise.yj.fr peuvent être récupérées au format JSON.</p>
-    <br>
 
     <h2>Récupération des données</h2>
-    <br>
 
     <p></p>
 
