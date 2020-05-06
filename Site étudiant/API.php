@@ -1,5 +1,5 @@
 <?php
-header('content-type:application/json');
+header('Content-Type: application/json');
 function api($filiere,$groupe){
     $RecupFich=file('tb.csv');
     $etu['name']=$filiere."/".$groupe;
@@ -46,7 +46,7 @@ if(ApiCle($apiCle)){
 }
 
 else{
-    $erreur="mauvaise cle";
+    $erreur="Mauvaise cle !";
     $json=jason($erreur);
 }
 

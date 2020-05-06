@@ -19,20 +19,21 @@
 </div>
 
     <hr>
-
-<h1>Trombinoscope</h1>
+<br>
 
 <div id="bloc_page2">
+	<h1>Trombinoscope</h1>
 	<br>
+
 	<nav id="menutb">
 		<ul>
 			<div class="dropdown">
 				<a>L1-MIPI</a>
 				<div class="slide">
 					<div class="dropcontent">
-					<a href="trombinoscope.php?filiere=L1-MIPI&groupe=A&key=QkqKI9uTFw">Groupe A</a>
-					<a href="trombinoscope.php?filiere=L1-MIPI&groupe=B&key=QkqKI9uTFw">Groupe B</a>
-					<a href="trombinoscope.php?filiere=L1-MIPI&groupe=C&key=QkqKI9uTFw">Groupe C</a>
+					<a href="trombinoscope.php?filiere=L1-MIPI&groupe=A&key=MKzzXqHuhY">Groupe A</a>
+					<a href="trombinoscope.php?filiere=L1-MIPI&groupe=B&key=MKzzXqHuhY">Groupe B</a>
+					<a href="trombinoscope.php?filiere=L1-MIPI&groupe=C&key=MKzzXqHuhY">Groupe C</a>
 					</div>
 				</div>
 			</div>
@@ -40,9 +41,9 @@
 				<a>L2-MIPI</a>
 				<div class="slide">
 					<div class="dropcontent">
-					<a href="trombinoscope.php?filiere=L2-MIPI&groupe=A&key=QkqKI9uTFw">Groupe A</a>
-					<a href="trombinoscope.php?filiere=L2-MIPI&groupe=B&key=QkqKI9uTFw">Groupe B</a>
-					<a href="trombinoscope.php?filiere=L2-MIPI&groupe=C&key=QkqKI9uTFw">Groupe C</a>
+					<a href="trombinoscope.php?filiere=L2-MIPI&groupe=A&key=MKzzXqHuhY">Groupe A</a>
+					<a href="trombinoscope.php?filiere=L2-MIPI&groupe=B&key=MKzzXqHuhY">Groupe B</a>
+					<a href="trombinoscope.php?filiere=L2-MIPI&groupe=C&key=MKzzXqHuhY">Groupe C</a>
 					</div>
 				</div>
 			</div>
@@ -50,19 +51,19 @@
 				<a>L3-I</a>
 				<div class="slide">
 					<div class="dropcontent">
-					<a href="trombinoscope.php?filiere=L3-I&groupe=A&key=QkqKI9uTFw">Groupe A</a>
-					<a href="trombinoscope.php?filiere=L3-I&groupe=B&key=QkqKI9uTFw">Groupe B</a>
-					<a href="trombinoscope.php?filiere=L3-I&groupe=C&key=QkqKI9uTFw">Groupe C</a>
+					<a href="trombinoscope.php?filiere=L3-I&groupe=A&key=MKzzXqHuhY">Groupe A</a>
+					<a href="trombinoscope.php?filiere=L3-I&groupe=B&key=MKzzXqHuhY">Groupe B</a>
+					<a href="trombinoscope.php?filiere=L3-I&groupe=C&key=MKzzXqHuhY">Groupe C</a>
 					</div>
 				</div>
 			</div>
 			<div class="dropdown">
-				<a>LP RS</a>
+				<a>LP-RS</a>
 				<div class="slide">
 					<div class="dropcontent">
-					<a href="trombinoscope.php?filiere=LP RS&groupe=A&key=QkqKI9uTFw">Groupe A</a>
-					<a href="trombinoscope.php?filiere=LP RS&groupe=B&key=QkqKI9uTFw">Groupe B</a>
-					<a href="trombinoscope.php?filiere=LP RS&groupe=C&key=QkqKI9uTFw">Groupe C</a>
+					<a href="trombinoscope.php?filiere=LP-RS&groupe=A&key=MKzzXqHuhY">Groupe A</a>
+					<a href="trombinoscope.php?filiere=LP-RS&groupe=B&key=MKzzXqHuhY">Groupe B</a>
+					<a href="trombinoscope.php?filiere=LP-RS&groupe=C&key=MKzzXqHuhY">Groupe C</a>
 					</div>
 				</div>
 			</div>
@@ -70,9 +71,9 @@
 				<a>LPI-RIWS</a>
 				<div class="slide">
 					<div class="dropcontent">
-					<a href="trombinoscope.php?filiere=LPI-RIWS&groupe=A&key=QkqKI9uTFw">Groupe A</a>
-					<a href="trombinoscope.php?filiere=LPI-RIWS&groupe=B&key=QkqKI9uTFw">Groupe B</a>
-					<a href="trombinoscope.php?filiere=LPI-RIWS&groupe=C&key=QkqKI9uTFw">Groupe C</a>
+					<a href="trombinoscope.php?filiere=LPI-RIWS&groupe=A&key=MKzzXqHuhY">Groupe A</a>
+					<a href="trombinoscope.php?filiere=LPI-RIWS&groupe=B&key=MKzzXqHuhY">Groupe B</a>
+					<a href="trombinoscope.php?filiere=LPI-RIWS&groupe=C&key=MKzzXqHuhY">Groupe C</a>
 					</div>
 				</div>
 			</div>
@@ -82,35 +83,39 @@
 
     <hr>
 
-	<h2>Eleves de <?php echo $_GET['filiere']. " / Groupe  " . $_GET['groupe']?></h2>
-<table align="center">
-		<tr>
-			<th>Nom</th>
-			<th>Prenom</th>
-			<th>Email</th>
-		</tr>
+	<h2 align="center">Elèves de <?php echo $_GET['filiere']. " / Groupe  " . $_GET['groupe']?></h2>
+	<br>
+		
 	<?php
 
 	if(isset($_GET['filiere'])){
-		$recup_data = file_get_contents('https://etudiantcergypontoise.yj.fr/API.php?filiere='.$_GET['filiere'].'&groupe='.$_GET['groupe'].'&key=yGUQcJiVss');
+		$recup_data = file_get_contents('https://etudiantcergypontoise.yj.fr/API.php?filiere='.$_GET['filiere'].'&groupe='.$_GET['groupe'].'&key=MKzzXqHuhY');
 		$donnees = json_decode($recup_data,true);
 		//var_dump($data);
 		$number = count($donnees["etudiant"]);
 		for ($i=0; $i <$number ; $i++) {
 				echo 
-				"<tr>
-				<td> ".$donnees["etudiant"][$i]['nom']."  </td>
-				<td> ".$donnees["etudiant"][$i]['prenom']." </td>
-				<td> ".$donnees["etudiant"][$i]['email']."</td>
-				</tr>
+				"<div id='tb'>
+				<p> Nom : ".$donnees["etudiant"][$i]['nom']."  </p>
+				<p> Prénom : ".$donnees["etudiant"][$i]['prenom']." </p>
+				<p> Email : ".$donnees["etudiant"][$i]['email']."</p>
+				</div>
 				";
 		}
 		
 	}
 ?>
-
-</table>
+<br><br><br>
+<input type="button" value="Imprimer" onClick="window.print()" id="buttonimp">
+<br><br><br>
 </div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<hr>
+
+	<div id="footer">
+        <p>Projet Avril | Tout droit réservé | 2020</p>
+    </div>
 			
 </body>
 </html>

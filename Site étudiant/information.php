@@ -62,7 +62,7 @@
 			</tr>
 			<tr>
 				<td><br><br><label id="labelinfo">Mot de passe : *</label></td>
-				<td><br><br><input placeholder="Votre mot de passe"  type="password" name="password" id="inputinfo" title="Pour plus de sécurité le mot de passe sera chiffré !" /></td>
+				<td><br><br><input placeholder="Votre mot de passe"  type="password" name="password" id="inputinfo" title="Pour plus de sécurité le mot de passe sera chiffré !" required /></td>
 			</tr>
 			<tr>
 				<td><br><br><label id="labelinfo">Filière :</label></td>

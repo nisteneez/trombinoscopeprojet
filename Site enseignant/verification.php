@@ -17,7 +17,7 @@ function verification(){
 	    exit();
 	}
 	else{
-	    header("Location: ./connexion.php");
+	    header("Location: ./connexion.html");
 	    exit();
 	}
 }

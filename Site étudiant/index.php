@@ -66,7 +66,7 @@
 			<option name="filiere">L1-MIPI</option>
 			<option name="filiere">L2-MIPI</option>
 			<option name="filiere">L3-I</option>
-			<option name="filiere">LP RS</option>
+			<option name="filiere">LP-RS</option>
 			<option name="filiere">LPI-RIWS</option>
 		</select>
 

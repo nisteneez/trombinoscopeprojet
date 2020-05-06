@@ -28,7 +28,7 @@
         <table>
                 <td><label>Veuillez entrer votre adresse email:</label></td>
             <tr>
-                <td><input type="mail" placeholder="Email" name="Mail_Api" id="inputAPI" required /></td>
+                <td><input type="email" placeholder="Votre Email" name="Mail_Api" id="inputAPI" required /></td>
             </tr>
         </table>
         <br>
@@ -86,9 +86,23 @@ if(isset($_GET['Mail_Api'])){
 
     <h2>Récupération des données</h2>
 
-    <p></p>
+    <p>$json = file_get_contents('CHEMIN_VERS_FICHIER_JSON');<br>
+    $json = json_decode($json);<br><br>
+    La récupération des données se fait simplement avec les deux fonctions php ci-dessus.<br><br>
+    Pour retourner les données sous forme de tableau associatif il faut rajouter TRUE comme deuxième condition de json_decode($json, true);
+    <br><br>
+    CHEMIN_VERS_FICHIER_JSON correspond à:<br>
+    https://etudiantcergypontoise.yj.fr/API.php?filiere=[FILIERE]&groupe=[GROUPE]&key=[KEY]
+    </p>
 
 
+
+    </div>
+    <br><br><br><br>
+    <hr>
+
+    <div id="footer">
+        <p>Projet Avril | Tout droit réservé | 2020</p>
     </div>
 
 </body>

@@ -3,7 +3,7 @@
 body {
   overflow-x: hidden;
   margin: auto;
-  background-color: #97407e;
+  background-image: url('fond.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -208,6 +208,33 @@ input {
 }
 
 #button {
+  width: 25%;
+  height: 60px;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color:#97407e;
+  display: block;
+  margin: auto;
+  text-align:center;
+}
+
+/*TROMBINOSCOPE*/
+
+#tb {
+  display: inline-block;
+  box-shadow: 0 4px 8px ;
+  transition: 0.3s;
+  width: 15%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  text-align:center;
+}
+#tb p{
+  margin-bottom: 5px;
+}
+
+#buttonimp {
   width: 25%;
   height: 60px;
   font-size: 18px;
