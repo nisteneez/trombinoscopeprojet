@@ -36,6 +36,9 @@
     </form>
 
 <?php
+
+/*CREATION DE LA CLE DE L'API*/
+
 function randomCle($longueur){
     $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $longueurMax = strlen($caracteres);
@@ -47,6 +50,8 @@ $chaineAlea .= $caracteres[rand(0, $longueurMax - 1)];
 return $chaineAlea;
 }
 
+
+/*RECUPERATION DU MAIL ET DE LA CLE*/
 
 function apiMail($email){
     $RecupFich=file('api.csv');

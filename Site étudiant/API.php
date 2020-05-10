@@ -1,4 +1,6 @@
 <?php
+/*CREATION DE L'API*/
+
 header('Content-Type: application/json');
 function api($filiere,$groupe){
     $RecupFich=file('tb.csv');
@@ -26,6 +28,9 @@ function api($filiere,$groupe){
 function jason($tab){
     return json_encode($tab);
 }
+
+/*VERIFICATION DE LA CLE DANS LE FICHIER CSV*/
+
 
 function ApiCle($verif){
     $RecupCle=file('api.csv');

@@ -1,4 +1,7 @@
 <?php
+
+/*VERIF DE CONNEXION*/
+
 session_start();
 $_SESSION['email']=$_GET['email'];
 function verification(){

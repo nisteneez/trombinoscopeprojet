@@ -12,7 +12,7 @@
 
 	<div id="menu">
             <ul>
-            	<li><img src="ucp.png" id="logo"></li>
+            	<li><img href="connexion.html" src="ucp.png" id="logo" title="Accès au compte enseignant"></li>
                 <li><a href="connexion.html"><img src="maison.jpg" id="icon" title="Accès au compte enseignant"></a></li>
             </ul>
     </div>

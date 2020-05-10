@@ -8,10 +8,12 @@
         if(in_array($extensionUpload, $extensionsValides)) {
             $chemin = "./images/".$_FILES['images']['name'].".".$extensionUpload;
         $resultat = move_uploaded_file($_FILES['images']['tmp_name'], $chemin);
-            echo $chemin;
    
     	} 
     	} 
+        exit(header("Location: ./information.php"));
+
     	}
+
 
     	?>

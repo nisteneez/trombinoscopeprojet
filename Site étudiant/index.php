@@ -84,6 +84,8 @@
 	<br>
 
 		<?php
+	/*RECUPERATION DES DONNEES DE L'ETUDIANT DANS UN FICHIER CSV*/
+
 	function souscription(){
 	if (isset($_GET['email'])){
 	$contenu=file('tb.csv');

@@ -36,6 +36,8 @@
 		<br>
 
 		<?php 
+		/*RECUPERATION DES DONNEES*/
+		
 			$informations=file("tb.csv");
 			$tab=array();
 			for ($i=0; $i < sizeof($informations) ; $i++) { 
@@ -97,7 +99,7 @@
 		</tr>	
 		</table>
 
-		<img id="photo" src="<?php echo './images/' . basename($info[2]."jpg");?>">
+		<img id="photo" src="<?php echo "./images/".$_FILES['images']['name'].".jpg.jpg" ?>">
 		
 		</form>
 
